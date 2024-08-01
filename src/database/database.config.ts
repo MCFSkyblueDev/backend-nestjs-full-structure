@@ -8,6 +8,7 @@ import { ItemEntity } from '@model/postgres/item/entities/item.entity';
 import { StoreEntity } from '@model/postgres/store/entities/store.entity';
 import * as process from 'node:process';
 import { AuthenticationEntity } from '@model/postgres/authentication/entities/authentication.entity';
+import { RoomEntity } from '@model/postgres/room/entities/room.entity';
 
 config();
 
@@ -19,7 +20,7 @@ export const dataSourceOptions: DataSourceOptions = {
   database: process.env.SQL_DATABASE,
   username: process.env.SQL_USERNAME,
   password: process.env.SQL_PASSWORD,
-  entities: [UserEntity, ItemEntity, StoreEntity, AuthenticationEntity],
+  entities: [UserEntity, ItemEntity, StoreEntity, AuthenticationEntity, RoomEntity],
   synchronize: true,
 };
 

@@ -113,5 +113,11 @@ export class AuthenticationService {
     return userInfo;
   }
 
-
+  async validateUser(token: string): Promise<any> {
+    try {
+      return this.jwtService.verify(token);
+    } catch (e) {
+      return null;
+    }
+  }
 }

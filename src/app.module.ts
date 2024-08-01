@@ -7,6 +7,8 @@ import { LoggerMiddleware } from '@middleware/logger.middleware';
 import { CorsMiddleware } from '@middleware/cors.middleware';
 import { ModelModule } from '@model/model.module';
 import { StarknetModule } from '@starknet/starknet.module';
+import { ChatGateway } from './gateways/chat/chat.gateway';
+import { ChatModule } from '@gateway/chat/chat.module';
 
 
 @Module({
@@ -15,10 +17,11 @@ import { StarknetModule } from '@starknet/starknet.module';
     ModelModule,
     ProviderModule,
     StarknetModule,
+    ChatModule
     // AppConfigService,
   ],
   controllers: [AppController],
-  providers: [AppService,
+  providers: [AppService, ChatGateway,
     // {
     //   provide: APP_GUARD,
     //   useClass: RolesGuard,

@@ -40,4 +40,6 @@ async function bootstrap() {
   await app.listen(5000);
 }
 
-bootstrap();
+bootstrap().then(() => {
+  console.log('App is running on port 5000');
+});

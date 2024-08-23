@@ -7,7 +7,7 @@ import { LoggerMiddleware } from '@middleware/logger.middleware';
 import { CorsMiddleware } from '@middleware/cors.middleware';
 import { ModelModule } from '@model/model.module';
 import { StarknetModule } from '@starknet/starknet.module';
-import { ChatGateway } from './gateways/chat/chat.gateway';
+import { ChatGateway } from '@gateway/chat/chat.gateway';
 import { ChatModule } from '@gateway/chat/chat.module';
 
 
